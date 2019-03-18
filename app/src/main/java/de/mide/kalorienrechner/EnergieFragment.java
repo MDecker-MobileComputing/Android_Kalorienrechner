@@ -66,15 +66,12 @@ public class EnergieFragment extends Fragment {
      * @return  Eingegebener Wert, wir wissen aber noch nicht, ob in kCal oder KJ;
      *          Wert ist negativ, wenn nichts eingegeben.
      */
-    public int getEnergie() {
+    protected int getEnergie() {
 
         String energieStr = _energieTextEdit.getText().toString().trim();
 
         if (energieStr.length() == 0) { return -1; }
 
-        // Es kann davon ausgegangen werden, dass eine zulässige
-        // Dezimalzahl eingegeben wurde, weil für das EditText-Element
-        // das folgende Attribut gesetzt wurde: android:inputType="numberDecimal"
         return (int) Double.parseDouble(energieStr);
     }
 
