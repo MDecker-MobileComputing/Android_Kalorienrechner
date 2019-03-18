@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#D0D0D0">
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <RadioButton
+            android:id="@+id/radiobutton_kcal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/kcal" />
+
+        <RadioButton
+            android:id="@+id/radiobutton_kj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kj" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/energie_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:hint="@string/energiegehalt"
+        android:inputType="numberDecimal"  />
+
+</LinearLayout>

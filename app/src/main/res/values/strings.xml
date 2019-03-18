@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">Kalorienrechner</string>
+
+    <string name="kcal">Kilokalorien (kcal)</string>
+    <string name="kj"  >Kilojoule (kJ)</string>
+
+    <string name="energiegehalt">Energiegehalt der Mahlzeit</string>
+
+    <string name="berechnen">Berechnen</string>
+
+    <string name="fruehstueck">Frühstück:</string>
+    <string name="mittagessen">Mittagessen:</string>
+    <string name="abendessen" >Abendessen:</string>
+
+</resources>
