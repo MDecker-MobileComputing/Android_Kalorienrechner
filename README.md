@@ -14,6 +14,10 @@ Upon pressing on a button the sum of these three meals is calculated and display
 
 <br>
 
+See also [this repository](https://github.com/MDecker-MobileComputing/Android_Fragment) for another example on how to use fragments in an Android app.
+
+<br>
+
 Identifiers (names for classes, variables and methods), UI text and (JavaDoc) comments are in German only.
 
 <br>
