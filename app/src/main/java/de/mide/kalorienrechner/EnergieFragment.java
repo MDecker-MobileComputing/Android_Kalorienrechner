@@ -12,14 +12,14 @@ import android.widget.RadioButton;
 /**
  * Java-Klasse für das Fragment. Es wird ein Energiewert (für eine Mahlzeit) eingeben,
  * der je nach gewählten RadioButton als Kilokalorien- oder Kilojoule-Wert interpretiert
- * wird. Eine Kilokalorie entspricht in etwa 4,18686 Kilojoule.
+ * wird. Eine Kilokalorie (kCal) entspricht in etwa 4,18686 Kilojoule (KJ).
  * <br><br>
  *
  * This file is licensed under the terms of the BSD 3-Clause License.
  */
 public class EnergieFragment extends Fragment {
 
-    /** RadioButton die ausgewählt ist, wenn Eingabe in Einheit Kilokalorien. */
+    /** RadioButton die ausgewählt ist, wenn Eingabe in Einheit Kilokalorien (kJ). */
     protected RadioButton _radioButtonKCal  = null;
 
     /**
@@ -32,7 +32,8 @@ public class EnergieFragment extends Fragment {
     /**
      * Layout-Datei für Fragment mit Inflater "aufblasen" und View daraus erzeugen.
      *
-     * @return  Aufgeblasenes Layout
+     * @return  Aufgeblasenes Layout als View-Objekt, wird der Methode 
+     *          {@link EnergieFragment#onViewCreated(View, Bundle)} als Argument übergeben.
      */
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -56,7 +57,7 @@ public class EnergieFragment extends Fragment {
 
         _radioButtonKCal = view.findViewById( R.id.radiobutton_kcal );
 
-        _energieTextEdit = view.findViewById( R.id.energie_edittext);
+        _energieTextEdit = view.findViewById( R.id.energie_edittext );
     }
 
 
@@ -72,14 +73,15 @@ public class EnergieFragment extends Fragment {
 
         if (energieStr.length() == 0) { return -1; }
 
-        return (int) Double.parseDouble(energieStr);
+        return (int) Double.parseDouble( energieStr );
     }
 
 
     /**
      * Getter für Energie in kCal.
      *
-     * @return  Eingegebene Energie in Kilokalorien (kCal).
+     * @return  Eingegebene Energie in Kilokalorien (kCal); Wert ist negativ
+     *          wenn nichts eingegeben ist.
      */
     public int getKilokalorien() {
 
@@ -99,7 +101,8 @@ public class EnergieFragment extends Fragment {
     /**
      * Getter für Energie in kJ.
      *
-     * @return  Eingegebene Energie in Kilojoule (kJ)
+     * @return  Eingegebene Energie in Kilojoule (kJ); Wert ist negativ
+     *          wenn nichts eingegeben ist.
      */
     public int getKilojoule() {
 
