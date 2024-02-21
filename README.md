@@ -1,5 +1,6 @@
-# Android-App "Kalorienberechnung"
+# Android-App "Kalorienberechnung" #
 
+<br>
 
 Simple Android app that shows how to use [fragments](https://developer.android.com/guide/components/fragments). 
 The app defines a fragment for the entry of the energy value of a meal (e.g. lunch); using two radio buttons
@@ -23,7 +24,10 @@ Identifiers (names for classes, variables and methods), UI text and (JavaDoc) co
 <br>
 
 ----
-# Screenshots
+
+## Screenshots ##
+
+<br>
 
 ![Screenshot 1](screenshot_1.png)
 
@@ -32,6 +36,11 @@ Identifiers (names for classes, variables and methods), UI text and (JavaDoc) co
 <br>
 
 ----
-# License
+
+## License ##
+
+<br>
 
 See the [LICENSE file](LICENSE.md) for license rights and limitations (BSD 3-Clause License).
+
+<br>
